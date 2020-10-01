@@ -35,7 +35,7 @@ public class AssertionsTest {
         //3. Porównaj URL strony z oczekiwanym;
         String ExpectedPolishUrl = "https://pl.wikiquote.org/wiki/Strona_g%C5%82%C3%B3wna";
         Assertions.assertEquals(ExpectedPolishUrl, driver.getCurrentUrl(), "Current URL is not: " + ExpectedPolishUrl);
-        //4. Znajdź w konsoli deweloperskiej w zakładce Elements fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona i użyj go do asercji;
+        //4. Znajdź w konsoli deweloperskiej w zakładce "Elements" fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona i użyj go do asercji;
         String PolishLanguage = "lang=\"pl\"";
         Assertions.assertTrue(driver.getPageSource().contains(PolishLanguage), "Page source does not contain: " + PolishLanguage);
         //5. Zmień język strony na niemiecki;
@@ -46,7 +46,7 @@ public class AssertionsTest {
         //7. Porównaj URL strony z oczekiwanym;
         String ExpectedGermanUrl = "https://de.wikiquote.org/wiki/Hauptseite";
         Assertions.assertEquals(ExpectedGermanUrl, driver.getCurrentUrl(), "Current URL is not: " + ExpectedGermanUrl);
-        //8. Znajdź w konsoli deweloperskiej w zakładce Elements fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona i użyj go do asercji;
+        //8. Znajdź w konsoli deweloperskiej w zakładce "Elements" fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona i użyj go do asercji;
         String GermanLanguage = "lang=\"de\"";
         Assertions.assertTrue(driver.getPageSource().contains(GermanLanguage), "Page source does not contain: " + GermanLanguage);
 
